@@ -6,7 +6,7 @@ export default defineConfig({
   title: "孟柯的技术笔记",
   description: "A VitePress Site",
   lang: 'zh-CN', // 设置默认语言为中文
-  base: '/web/',
+  base: '/web',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: {
