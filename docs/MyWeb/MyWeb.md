@@ -165,7 +165,7 @@ scp -r C:\Users\20205\Desktop\mytest\docs\.vuepress\dist\* root@1.92.211.91:/var
 ### 5.3 安装Nginx
 在服务器终端输入命令：`sudo apt install nginx`
 ### 5.4 配置Nginx
-在服务器终端输入命令：`sudo vim /etc/nginx/sites-available/your-domain`，打开Nginx配置文件。
+在服务器终端输入命令：`sudo vim /etc/nginx/sites-available/yourdomain.conf`，打开Nginx配置文件。
 在文件中添加以下内容：
 ```
 server {
@@ -191,7 +191,8 @@ sudo chmod -R 755 /var/www/mytest
 ### 5.6 验证配置并重启Nginx
 在终端输入以下指令：
 ```
-sudo nginx -t
+sudo ln -s /etc/nginx/sites-available/yourdomain.conf /etc/nginx/sites-enabled/ 
+sudo nginx -t # 检查配置语法 
 sudo systemctl restart nginx
 ```
 ### 5.7 通过域名访问静态页面

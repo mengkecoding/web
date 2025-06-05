@@ -65,7 +65,7 @@
 ### 6.7 配置Nginx反向代理
 #### 6.7.1 在终端输入命令
 ```
-sudo nano /etc/nginx/sites-available/your-domain
+sudo nano /etc/nginx/sites-available/yourdomain.conf
 ```
 ![Image](6.7.1.png)
 #### 6.7.2 添加以下内容（根据图片进行修改）
@@ -85,7 +85,7 @@ server {
 ![Image](6.7.2.png)
 #### 6.7.3 启用配置：
 ```
-sudo ln -s /etc/nginx/sites-available/your-domain /etc/nginx/sites-enabled/ 
+sudo ln -s /etc/nginx/sites-available/yourdomain.conf /etc/nginx/sites-enabled/ 
 sudo nginx -t # 检查配置语法 
 sudo systemctl restart nginx
 ```
