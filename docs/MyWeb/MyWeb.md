@@ -147,12 +147,12 @@ export default defineConfig({
 ```
 更新配置文件后，参考**第二章**的内容运行项目，测试效果。   
 
-## 5. 生成静态页面
+## 5. 将项目部署到云服务器
+### 5.1 生成静态页面
 在**项目目录**下打开终端，输入指令：`npm run docs:build`，生成静态页面。
 
 ![](5.png)
-## 6. 将静态页面部署到自己的云服务器
-### 6.1 上传静态页面到服务器
+### 5.2 上传静态页面到服务器
 在云服务器中使用mkdir指令创建/var/www/mytest目录，用于存放静态页面。
 ```
 mkdir /var/www/mytest
@@ -162,9 +162,9 @@ mkdir /var/www/mytest
 ```
 scp -r C:\Users\20205\Desktop\mytest\docs\.vuepress\dist\* root@1.92.211.91:/var/www/mytest/
 ```
-### 6.2 安装Nginx
+### 5.3 安装Nginx
 在服务器终端输入命令：`sudo apt install nginx`
-### 6.3 配置Nginx
+### 5.4 配置Nginx
 在服务器终端输入命令：`sudo vim /etc/nginx/sites-available/your-domain`，打开Nginx配置文件。
 在文件中添加以下内容：
 ```
@@ -182,18 +182,120 @@ server {
     }
 ```
 
-### 6.4 确保Nginx有权限访问项目所在目录
+### 5.5 确保Nginx有权限访问项目所在目录
 在终端输入以下指令：
 ```
 sudo chown -R www-data:www-data /var/www/mytest
 sudo chmod -R 755 /var/www/mytest
 ```
-### 6.5 验证配置并重启Nginx
+### 5.6 验证配置并重启Nginx
 在终端输入以下指令：
 ```
 sudo nginx -t
 sudo systemctl restart nginx
 ```
-### 6.6 通过域名访问静态页面
+### 5.7 通过域名访问静态页面
 参考第一篇文章配置域名解析后，在浏览器中输入域名即可访问静态页面。
 
+## 6 将项目部署到GitHub
+### 6.1 配置GitHub Pages
+在GitHub中创建一个新的仓库，仓库名称为：web。
+### 6.2 修改项目配置文件
+在config.mts文件中，增加base属性为：`base: '/web'`，修改后效果如下：
+![](6.1.png)
+在项目的`.github/workflows`目录中创建`deploy.yml'文件，添加以下内容：
+```
+# 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
+#
+name: Deploy VitePress site to Pages
+
+on:
+  # 在针对 `main` 分支的推送上运行。如果你
+  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+  push:
+    branches: [master]
+
+  # 允许你从 Actions 选项卡手动运行此工作流程
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 构建工作
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消此区域注释
+      #   with:
+      #     version: 9
+      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm # 或 pnpm / yarn
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Install dependencies
+        run: npm ci # 或 pnpm install / yarn install / bun install
+      - name: Build with VitePress
+        run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+### 6.3 安装git，并初始化git
+可以参考[Git 详细安装教程](https://blog.csdn.net/mukes/article/details/115693833)。
+### 6.4 提交代码到GitHub
+```
+# 进入你的静态页面目录
+cd path/to/your/static-site
+
+# 初始化 Git 仓库（如果尚未初始化）
+git init
+
+# 添加所有文件
+git add .
+
+# 提交文件
+git commit -m "Initial commit"
+
+# 添加 GitHub 远程仓库(https;//github.com/你的用户名/你的仓库名.git)
+git remote add origin https://github.com/mengkecoding/web.git
+
+# 推送文件到 GitHub
+git push -u origin master
+```
+### 6.5 配置GitHub Pages
+在GitHub中进入你的仓库，点击Settings，选择Pages，在Source中选择GitHub Actions。
+![](6.2.png)
+在项目部署完成后就可以访问你的技术博客了。
