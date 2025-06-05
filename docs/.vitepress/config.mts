@@ -29,6 +29,8 @@ export default defineConfig({
       }
     ],
 
+     mobileMenuButtonText: '菜单',
+
     socialLinks: [
       
       { icon: 'github', link: 'https://github.com/mengkecoding' }
