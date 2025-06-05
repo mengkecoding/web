@@ -1,0 +1,93 @@
+import{_ as a,c as n,o as p,ae as e}from"./chunks/framework.BjlC_BXf.js";const l="/assets/2.1.CjQ6c0B7.png",i="/assets/2.2.sQD0LuRk.png",t="/assets/2.3.DhtP-n-i.png",o="/assets/2.4.7yC_PnXu.png",c="/assets/4.2.Chg8HPnW.png",d="/assets/5.D4cd8m4N.png",_=JSON.parse('{"title":"二、 手把手教你搭建属于自己的技术博客（基于VitePress）","description":"","frontmatter":{},"headers":[],"relativePath":"MyWeb/MyWeb.md","filePath":"MyWeb/MyWeb.md"}'),r={name:"MyWeb/MyWeb.md"};function h(u,s,g,m,b,k){return p(),n("div",null,s[0]||(s[0]=[e('<h1 id="二、-手把手教你搭建属于自己的技术博客-基于vitepress" tabindex="-1">二、 手把手教你搭建属于自己的技术博客（基于VitePress） <a class="header-anchor" href="#二、-手把手教你搭建属于自己的技术博客-基于vitepress" aria-label="Permalink to &quot;二、 手把手教你搭建属于自己的技术博客（基于VitePress）&quot;">​</a></h1><h2 id="_1-环境准备" tabindex="-1">1. 环境准备 <a class="header-anchor" href="#_1-环境准备" aria-label="Permalink to &quot;1. 环境准备&quot;">​</a></h2><p>安装node.js</p><p>node.js下载地址：<a href="https://nodejs.cn/download/" target="_blank" rel="noreferrer">https://nodejs.cn/download/</a>。 安装完成后，在终端输入指令：<code>node -v</code>，查看node.js版本。</p><h2 id="_2-创建项目" tabindex="-1">2.创建项目 <a class="header-anchor" href="#_2-创建项目" aria-label="Permalink to &quot;2.创建项目&quot;">​</a></h2><h3 id="_2-1-创建项目目录" tabindex="-1">2.1 创建项目目录 <a class="header-anchor" href="#_2-1-创建项目目录" aria-label="Permalink to &quot;2.1 创建项目目录&quot;">​</a></h3><p>在桌面新建一个文件夹（mytest）用于存放项目，打开该文件夹，在文件夹内点击右键打开终端</p><p><img src="'+l+'" alt=""></p><h3 id="_2-2-安装vitepress" tabindex="-1">2.2 安装VitePress <a class="header-anchor" href="#_2-2-安装vitepress" aria-label="Permalink to &quot;2.2 安装VitePress&quot;">​</a></h3><p>将VitePress安装到当前项目目录下，输入指令：<code>npm add -D vitepress</code>。 <img src="'+i+'" alt=""></p><h3 id="_2-3-初始化项目" tabindex="-1">2.3 初始化项目 <a class="header-anchor" href="#_2-3-初始化项目" aria-label="Permalink to &quot;2.3 初始化项目&quot;">​</a></h3><p>在终端输入指令：<code>npx vitepress init</code>，根据下图填写信息，回车即可。 <img src="'+t+'" alt=""></p><h3 id="_2-4-启动项目" tabindex="-1">2.4 启动项目 <a class="header-anchor" href="#_2-4-启动项目" aria-label="Permalink to &quot;2.4 启动项目&quot;">​</a></h3><p>在终端输入指令：<code>npm run docs:dev</code>，启动项目。在浏览器中输入：<code>localhost:5173</code>，如果显示正常，则说明项目创建成功。 <img src="'+o+`" alt=""></p><h2 id="_3-markdown基础语法" tabindex="-1">3. Markdown基础语法 <a class="header-anchor" href="#_3-markdown基础语法" aria-label="Permalink to &quot;3. Markdown基础语法&quot;">​</a></h2><p>加粗：<code>**加粗**</code></p><p>斜体：<code>*斜体*</code></p><p>换行：两个回车</p><p>标题：<code># 一级标题</code> <code>## 二级标题</code> <code>### 三级标题</code></p><p>引用：<code>&gt; 引用</code></p><p>列表：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>- 无序列表</span></span>
+<span class="line"><span>+ 无序列表</span></span>
+<span class="line"><span>* 无序列表</span></span></code></pre></div><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>1. 有序列表</span></span>
+<span class="line"><span>2. 有序列表</span></span>
+<span class="line"><span>3. 有序列表</span></span></code></pre></div><p>链接：<code>[链接名称](链接地址)</code></p><p>图片：<code>![图片名称](图片地址)</code></p><h2 id="_4-编写文件" tabindex="-1">4. 编写文件 <a class="header-anchor" href="#_4-编写文件" aria-label="Permalink to &quot;4. 编写文件&quot;">​</a></h2><h3 id="_4-1-编写首页" tabindex="-1">4.1 编写首页 <a class="header-anchor" href="#_4-1-编写首页" aria-label="Permalink to &quot;4.1 编写首页&quot;">​</a></h3><p>编写docs目录下的index.md文件，可以参考我的配置。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>---</span></span>
+<span class="line"><span># https://vitepress.dev/reference/default-theme-home-page</span></span>
+<span class="line"><span>layout: home</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>hero:</span></span>
+<span class="line"><span>  name: &quot;孟柯的技术笔记&quot;</span></span>
+<span class="line"><span>  #text: &quot;A VitePress Site&quot;</span></span>
+<span class="line"><span>  tagline: 欢迎来到我的博客！在这里，我将分享Java后端开发与大模型应用领域的前沿知识与实践经验。欢迎一起探索技术前沿，解锁更多可能～ </span></span>
+<span class="line"><span>  actions:</span></span>
+<span class="line"><span>  - text: 开始学习 →</span></span>
+<span class="line"><span>    link: /HelloWorld/HelloWorld</span></span>
+<span class="line"><span>    type: primary</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>features:</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/github/64/64</span></span>
+<span class="line"><span>    title: 🐱 GitHub</span></span>
+<span class="line"><span>    details: &#39;查看我的开源项目和代码(https://github.com/mengkecoding)&#39;  # 单引号包裹 Markdown 链接</span></span>
+<span class="line"><span>    link: https://github.com/mengkecoding</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/csdn/64/64</span></span>
+<span class="line"><span>    title: 📝 CSDN</span></span>
+<span class="line"><span>    details: &#39;阅读我的博客文章(https://blog.csdn.net/kijio)&#39;  # 单引号包裹 Markdown 链接</span></span>
+<span class="line"><span>    link: https://blog.csdn.net/kijio</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/wechat/64/64</span></span>
+<span class="line"><span>    title: 📱 公众号</span></span>
+<span class="line"><span>    details: 关注我的公众号：小孟的技术笔记，获取最新技术文章</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/xiaohongshu/64/64</span></span>
+<span class="line"><span>    title: 🌸 小红书</span></span>
+<span class="line"><span>    details: 小红书ID：6913281270</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/weixin/64/64</span></span>
+<span class="line"><span>    title: 💬 抖音</span></span>
+<span class="line"><span>    details: 抖音ID：meng_0927</span></span>
+<span class="line"><span>  - #icon: https://picsum.photos/seed/weixin/64/64</span></span>
+<span class="line"><span>    title: 💬 微信</span></span>
+<span class="line"><span>    details: 微信：mengkecoding，欢迎添加我为好友一起交流</span></span>
+<span class="line"><span>---</span></span></code></pre></div><h3 id="_4-2-编写其他页面" tabindex="-1">4.2 编写其他页面 <a class="header-anchor" href="#_4-2-编写其他页面" aria-label="Permalink to &quot;4.2 编写其他页面&quot;">​</a></h3><p>在docs目录下新建一个文件夹（HelloWorld），在HelloWorld文件夹下新建一个HelloWorld.md文件，在HelloWorld.md文件中编写以下内容：</p><p><img src="`+c+`" alt=""></p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 一、 手把手教你部署HelloWorld到云服务器</span></span>
+<span class="line"><span>## 1. 购买一台云服务器</span></span>
+<span class="line"><span>首先需要购买一台装有linux系统的云服务器，阿里云、火山引擎、腾讯云、华为云、京东云首次购买轻量的云服务都在40-60元/年（2核2G），我购买的是华为的云服务器，需要设置服务器的账号密码，安装系统镜像大概需要2-5分钟的时间，记住自己的公网ip地址。</span></span>
+<span class="line"><span>## 2. 应用上传服务器前的准备</span></span>
+<span class="line"><span>### 2.1 更新软件包列表信息</span></span>
+<span class="line"><span>在终端输入指令：\`sudo apt update\`</span></span>
+<span class="line"><span>### 2.2 安装JDK17</span></span>
+<span class="line"><span>在终端输入指令：\`sudo apt install openjdk-17-jdk\`</span></span>
+<span class="line"><span>### 2.3 创建部署目录</span></span>
+<span class="line"><span>在终端输入指令：\`mkdir ~/spring-apps\`</span></span>
+<span class="line"><span>## 3.创建一个HelloWorld项目</span></span>
+<span class="line"><span>### 3.1 点击New Project</span></span>
+<span class="line"><span>### 3.2 点击Spring Boot，按图示进行配置</span></span>
+<span class="line"><span>### 3.3 勾选Spring Web，创建项目</span></span>
+<span class="line"><span>### 3.4 创建HelloController类</span></span></code></pre></div><h3 id="_4-3-更新配置文件" tabindex="-1">4.3 更新配置文件 <a class="header-anchor" href="#_4-3-更新配置文件" aria-label="Permalink to &quot;4.3 更新配置文件&quot;">​</a></h3><p>更新.vuepress目录下的config.mts文件，进行如下配置：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>import { defineConfig } from &#39;vitepress&#39;</span></span>
+<span class="line"><span>// 为了解决找不到模块的问题，可添加类型声明来处理 SVG 导入</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// https://vitepress.dev/reference/site-config</span></span>
+<span class="line"><span>export default defineConfig({</span></span>
+<span class="line"><span>  title: &quot;孟柯的技术笔记&quot;,</span></span>
+<span class="line"><span>  description: &quot;A VitePress Site&quot;,</span></span>
+<span class="line"><span>  themeConfig: {</span></span>
+<span class="line"><span>    // https://vitepress.dev/reference/default-theme-config</span></span>
+<span class="line"><span>    nav: [</span></span>
+<span class="line"><span>      { text: &#39;主页&#39;, link: &#39;/&#39; },</span></span>
+<span class="line"><span>      { text: &#39;笔记&#39;, link: &#39;/HelloWorld/HelloWorld&#39; }</span></span>
+<span class="line"><span>    ],</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    sidebar: [</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        text: &#39;教程&#39;,</span></span>
+<span class="line"><span>        items: [</span></span>
+<span class="line"><span>          { text: &#39;部署HelloWorld到云服务器&#39;, link: &#39;HelloWorld/HelloWorld&#39; }</span></span>
+<span class="line"><span>        ]</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>    ],</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    socialLinks: [</span></span>
+<span class="line"><span>      { icon: &#39;github&#39;, link: &#39;https://github.com/mengkecoding&#39; }</span></span>
+<span class="line"><span>    ]</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>})</span></span></code></pre></div><p>更新配置文件后，参考<strong>第二章</strong>的内容运行项目，测试效果。</p><h2 id="_5-生成静态页面" tabindex="-1">5. 生成静态页面 <a class="header-anchor" href="#_5-生成静态页面" aria-label="Permalink to &quot;5. 生成静态页面&quot;">​</a></h2><p>在<strong>项目目录</strong>下打开终端，输入指令：<code>npm run docs:build</code>，生成静态页面。</p><p><img src="`+d+`" alt=""></p><h2 id="_6-将静态页面部署到自己的云服务器" tabindex="-1">6. 将静态页面部署到自己的云服务器 <a class="header-anchor" href="#_6-将静态页面部署到自己的云服务器" aria-label="Permalink to &quot;6. 将静态页面部署到自己的云服务器&quot;">​</a></h2><h3 id="_6-1-上传静态页面到服务器" tabindex="-1">6.1 上传静态页面到服务器 <a class="header-anchor" href="#_6-1-上传静态页面到服务器" aria-label="Permalink to &quot;6.1 上传静态页面到服务器&quot;">​</a></h3><p>在云服务器中使用mkdir指令创建/var/www/mytest目录，用于存放静态页面。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>mkdir /var/www/mytest</span></span></code></pre></div><p>使用scp命令将静态页面上传到服务器，在终端输入指令(需要根据自己的情况修改指令，详见我的第一篇文章)：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>scp -r C:\\Users\\20205\\Desktop\\mytest\\docs\\.vuepress\\dist\\* root@1.92.211.91:/var/www/mytest/</span></span></code></pre></div><h3 id="_6-2-安装nginx" tabindex="-1">6.2 安装Nginx <a class="header-anchor" href="#_6-2-安装nginx" aria-label="Permalink to &quot;6.2 安装Nginx&quot;">​</a></h3><p>在服务器终端输入命令：<code>sudo apt install nginx</code></p><h3 id="_6-3-配置nginx" tabindex="-1">6.3 配置Nginx <a class="header-anchor" href="#_6-3-配置nginx" aria-label="Permalink to &quot;6.3 配置Nginx&quot;">​</a></h3><p>在服务器终端输入命令：<code>sudo vim /etc/nginx/sites-available/your-domain</code>，打开Nginx配置文件。 在文件中添加以下内容：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>server {</span></span>
+<span class="line"><span>    listen 80;</span></span>
+<span class="line"><span>    server_name mengkecoding.cn www.mengkecoding.cn;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 更新为新路径</span></span>
+<span class="line"><span>    root /var/www/mytest;</span></span>
+<span class="line"><span>    index index.html;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    location / {</span></span>
+<span class="line"><span>        try_files $uri $uri/ /index.html;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    }</span></span></code></pre></div><h3 id="_6-4-确保nginx有权限访问项目所在目录" tabindex="-1">6.4 确保Nginx有权限访问项目所在目录 <a class="header-anchor" href="#_6-4-确保nginx有权限访问项目所在目录" aria-label="Permalink to &quot;6.4 确保Nginx有权限访问项目所在目录&quot;">​</a></h3><p>在终端输入以下指令：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>sudo chown -R www-data:www-data /var/www/mytest</span></span>
+<span class="line"><span>sudo chmod -R 755 /var/www/mytest</span></span></code></pre></div><h3 id="_6-5-验证配置并重启nginx" tabindex="-1">6.5 验证配置并重启Nginx <a class="header-anchor" href="#_6-5-验证配置并重启nginx" aria-label="Permalink to &quot;6.5 验证配置并重启Nginx&quot;">​</a></h3><p>在终端输入以下指令：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>sudo nginx -t</span></span>
+<span class="line"><span>sudo systemctl restart nginx</span></span></code></pre></div><h3 id="_6-6-通过域名访问静态页面" tabindex="-1">6.6 通过域名访问静态页面 <a class="header-anchor" href="#_6-6-通过域名访问静态页面" aria-label="Permalink to &quot;6.6 通过域名访问静态页面&quot;">​</a></h3><p>参考第一篇文章配置域名解析后，在浏览器中输入域名即可访问静态页面。</p>`,59)]))}const x=a(r,[["render",h]]);export{_ as __pageData,x as default};
