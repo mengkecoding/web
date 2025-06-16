@@ -7,7 +7,7 @@ export default defineConfig({
   title: "孟柯的技术笔记",
   description: "A VitePress Site",
   lang: 'zh-CN', // 设置默认语言为中文
-base: '/web',
+base:'/web/',
   markdown: {
     config: (md) => {
         md.use(markdownItVideo, {
@@ -25,13 +25,13 @@ base: '/web',
     
     nav: [
       { text: '主页', link: '/' },
-      { text: '实践', link: '/Practice/HelloWorld/HelloWorld' },
-      { text: '工具', link: '/Tools/Updata' },
+      { text: '实践', link: '/Practice/HelloWorld' },
+      { text: '工具', link: '/Tools/AICoding' },
       // { text: '机器学习', link: '/ML/Updata' },
       // { text: '深度学习', link: '/DL/Updata' },
        { text: '大模型', link: '/LLM/Updata' },
        { text: 'Java', link: '/Java/Updata' },
-      // { text: 'Python', link: '/Python/Updata' },
+       { text: 'Python', link: '/Python/Updata' },
       // { text: 'Linux', link: '/Linux/Updata' },
       // { text: 'ReAct', link: '/ReAct/Updata' }
     ],
@@ -42,9 +42,10 @@ base: '/web',
         {
           text: '实践',
           items: [
-            { text: '部署HelloWorld到云服务器', link: '/Practice/HelloWorld/HelloWorld' },
-            { text: '搭建自己的技术博客', link: '/Practice/MyWeb/MyWeb' } ,// 注意路径需与目录一致
-            { text: '使用trae开发登录接口', link: '/Practice/model/loginmodel' }
+            { text: '部署HelloWorld到云服务器', link: '/Practice/HelloWorld' },
+            { text: '搭建自己的技术博客', link: '/Practice/Website' } ,// 注意路径需与目录一致
+            { text: '使用trae开发登录接口', link: '/Practice/AILogin' },
+            { text: 'Dify本地部署', link: '/Practice/dify-local-deployment-guide' }
           ]
         }
       ],
@@ -52,7 +53,7 @@ base: '/web',
         {
           text: '工具',
           items: [
-            { text: '未完待续', link: '/Tools/Updata' }, // 建议创建独立文件
+            { text: 'AI Coding', link: '/Tools/AICoding' }, // 建议创建独立文件
             // 可添加更多子项
           ]
         }
@@ -79,7 +80,7 @@ base: '/web',
         {
           text: '大模型',
           items: [
-            { text: '未完待续', link: '/LLM/Updata' }, // 建议创建独立文件
+            { text: '大模型应用开发极简入门', link: '/LLM/Updata' }, // 建议创建独立文件
             // 可添加更多子项
           ]
         }
@@ -92,17 +93,17 @@ base: '/web',
             // 可添加更多子项
           ]
         }
-      ]
+      ],
       
-      // '/Python/': [
-      //   {
-      //     text: 'Python',
-      //     items: [
-      //       { text: '未完待续', link: '/Python/Updata' }, // 建议创建独立文件
-      //       // 可添加更多子项
-      //     ]
-      //   }
-      // ],
+      '/Python/': [
+        {
+          text: 'Python',
+          items: [
+            { text: '未完待续', link: '/Python/Updata' }, // 建议创建独立文件
+            // 可添加更多子项
+          ]
+        }
+      ]
       // '/Linux/': [
       //   {
       //     text: 'Linux',

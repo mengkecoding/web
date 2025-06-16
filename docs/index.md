@@ -8,7 +8,7 @@ hero:
   tagline: 欢迎来到我的博客！在这里，我将分享Java后端开发与大模型应用领域的前沿知识与实践经验。欢迎一起探索技术前沿，解锁更多可能～ 
   actions:
   - text: 开始学习 →
-    link: /Practice/HelloWorld/HelloWorld
+    link: /Practice/HelloWorld
     type: primary
 
 features:
