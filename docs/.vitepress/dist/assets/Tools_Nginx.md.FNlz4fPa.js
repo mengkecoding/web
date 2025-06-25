@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./chunks/framework.BTjre2ya.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Tools/Nginx.md","filePath":"Tools/Nginx.md"}'),a={name:"Tools/Nginx.md"};function n(s,r,c,i,p,_){return o(),t("div")}const m=e(a,[["render",n]]);export{l as __pageData,m as default};

@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as h,ae as l}from"./chunks/framework.BTjre2ya.js";const g=JSON.parse('{"title":"Java基本语法","description":"","frontmatter":{},"headers":[],"relativePath":"Java/java.md","filePath":"Java/java.md"}'),t={name:"Java/java.md"};function n(k,s,p,e,E,r){return h(),a("div",null,s[0]||(s[0]=[l("",194)]))}const y=i(t,[["render",n]]);export{g as __pageData,y as default};

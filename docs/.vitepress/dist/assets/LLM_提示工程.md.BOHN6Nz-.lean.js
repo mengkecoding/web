@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,ae as o}from"./chunks/framework.BTjre2ya.js";const c=JSON.parse('{"title":"提示工程","description":"","frontmatter":{},"headers":[],"relativePath":"LLM/提示工程.md","filePath":"LLM/提示工程.md"}'),n={name:"LLM/提示工程.md"};function i(s,a,h,l,_,d){return r(),t("div",null,a[0]||(a[0]=[o("",17)]))}const u=e(n,[["render",i]]);export{c as __pageData,u as default};
