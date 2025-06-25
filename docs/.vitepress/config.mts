@@ -7,7 +7,7 @@ export default defineConfig({
   title: "小孟的技术笔记",
   description: "A VitePress Site",
   lang: 'zh-CN', // 设置默认语言为中文
-base: '/web',
+base: '/website',
   markdown: {
     config: (md) => {
         md.use(markdownItVideo, {
