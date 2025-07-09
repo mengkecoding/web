@@ -7,7 +7,7 @@ export default defineConfig({
   title: "小孟的技术笔记",
   description: "A VitePress Site",
   lang: 'zh-CN', // 设置默认语言为中文
-base: '/website',
+base: '/web',
   markdown: {
     config: (md) => {
         md.use(markdownItVideo, {
@@ -48,7 +48,7 @@ base: '/website',
             { text: '搭建自己的技术博客', link: '/Practice/Website' } ,// 注意路径需与目录一致
             { text: '使用trae开发登录接口', link: '/Practice/AILogin' },
             { text: '低成本搭建公网可访问的本地应用', link: '/Practice/低成本搭建公网可访问的本地应用' },
-            
+            { text: 'AI编程实战：Cursor避坑指南与高效提示词设计', link: '/Practice/blog-user-service' },
           ]
         },
         {
@@ -160,7 +160,7 @@ base: '/website',
         {
           text: 'Java',
           items: [
-            { text: '未完待续', link: '/java/Updata' }, // 建议创建独立文件
+            { text: '未完待续', link: '/Java/Updata' }, // 建议创建独立文件
             // 可添加更多子项
           ]
         }

@@ -60,4 +60,10 @@
 - **`man [命令]`**：查看命令的手册页，获取详细的使用说明。
 - **`alias`**：为命令创建别名，简化复杂命令的输入，例如`alias ll='ls -l'`。
 
+### 命令行连接（SSH）
+```
+sudo apt update
+sudo apt install openssh-server  # 安装SSH服务
+sudo systemctl enable --now ssh  # 启动并设置开机自启
+```
 # 未完待续~ :tada:
